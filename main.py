@@ -36,7 +36,7 @@ async def on_message(message):
             await client.add_reaction(message, '🌕')
 
     #You can change bot's game info
-    if message.content.startswith('!game') and message.author.id == Thaquas:
+    if message.content.startswith('!game') and message.author.id == User_ID:
         game = message.content[6:]
         await client.change_presence(game=discord.Game(name=game))
         await client.send_message(message.channel, "Game info has been changed to "+game)
